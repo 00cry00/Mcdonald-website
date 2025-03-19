@@ -1,0 +1,237 @@
+/* Base Style */
+body {font-family:Arial, Helvetica, sans-serif;font-style: 16px;background-color: #f9f8f8f0;}
+a{text-decoration: none;}
+h1 , h2 , h3 , h4 , p {color: #000; padding-bottom: 30px;} 
+p{line-height: 28px; color:rgb(43, 43, 43); font-weight: 300;}
+.big-text{font-size: 50px;font-weight: 900;}
+.med-text{font-size: 40px}
+.normal-text{font-size: 25px}
+.small-text{font-size: 14px;}
+.button{padding: 18px 28px; background: #316bff;color:#fff; display: inline-block; border-radius: 4px; }
+@media (max-width: 768px){
+.big-text{font-size: 40px;}
+}
+/* !header */
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: white;opacity: 0.85;
+width: 150px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {font-weight: bold;}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0px 50px;
+margin-top: -10px ;
+}
+.logo{z-index: 1;cursor: pointer;}
+.menu{
+width:100%;
+z-index: 0;
+list-style: none;
+}
+.menu li{display: inline-block;}
+.menu li a{color: #000000;padding: 15px;display: block;margin-top: 40px;transition: all 0.3s ease 0s;}
+.menu li a:hover{font-weight: bold; border-bottom: 3px solid #ffbc0d;}
+.hamburger{display: none;}
+/* ! Hero */
+.hero {
+margin-top: -16px;
+height: 85vh;
+display:flex; width: 100%;align-items:center;
+background: url('img/categorie-menu.jpg') no-repeat center center;
+background-size:cover;
+}
+.hero__content{
+width:100%;
+max-width: 1200px;
+padding-left: 60px;
+}
+.hero__content2{
+    width:100%;
+    max-width: 1200px;
+    padding-left: 60px;
+    margin-top: -10px;
+    }
+.hero__content h1,
+.hero__content p{color:#000000;}
+.hero__content p,.hero__content h4{margin-top: -50px;}
+.hero--small{height:450px;text-align: center;}
+/* Panel blue */
+.menu2 {
+display: flex;
+flex-wrap: wrap; /* Per consentire il wrapping dei prodotti quando non c'è abbastanza spazio */
+justify-content: space-around; /* Distribuire uniformemente i prodotti lungo l'asse principale */
+max-width: 1500px; /* Limita la larghezza massima del menu */
+margin: 100px auto; /* Centra il menu */
+}
+.product {
+width: 180px; /* Larghezza fissa per ogni prodotto */
+margin: 10px; /* Spazio tra i prodotti */
+text-align: center; /* Centra il testo all'interno del prodotto */
+}
+.product img {
+max-width: 100%; /* Assicura che le immagini non sforino i loro contenitori */
+height: auto;
+}
+.product p {
+margin: 5px 0; /* Spazio tra i paragrafi */
+}
+.product p:hover{
+color: #ffbc0d;
+}
+.zoom {
+transition: transform .2s; /* Animation */
+}
+.zoom:hover {
+transform: scale(1.1); /* (50% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.card{
+display: flex;
+padding-bottom: 150px;
+}
+.card1 {
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+width: 52%;
+padding-left: 20px;
+} 
+.card1:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card2 {
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+width: 25%;
+padding-left: 20px;
+}
+.card2:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+padding: 2px 16px;
+}
+#footer {
+background-color: #fff;
+position: relative;
+text-align: center;
+font: 14px D-DIN-Bold,Arial,Verdana,sans-serif;
+font-weight: 400;
+font-weight: bold;
+color: #ffbc0d;
+padding: 20px 0px;
+}
+#map {
+height: 100%;
+}
+/* 
+* Optional: Makes the sample page fill the window. 
+*/
+.container {
+display: flex;
+}
+#left-panel
+{
+padding-top: 10px;
+flex: 1;
+}
+#left-panel input
+{
+padding: 10px;
+font-size: 20px;
+border: 1px solid grey;
+float: left;
+width: 80%;
+border-right: none;
+background: #ffffff;
+}
+#left-panel button
+{
+float: left;
+width: 10%;
+padding: 10px;
+background: #fcfcfc;
+color: rgb(237, 182, 31);
+font-size: 20px;
+border: 1px solid grey;
+border-left: none;
+cursor: pointer;
+}
+#right-panel {
+flex: 2;
+height: 100vh; /* Altezza a tutta la viewport */
+padding: 10px;
+}
+@media (max-width: 768px){
+.logo{
+margin-left: -30px;
+margin-top: 20px;
+} 
+.hero {
+margin-top: -106px;
+height: 100vh;
+display:flex; width: 100%;align-items:center;
+background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.9)),url('img/categorie-menu.jpg') no-repeat center center;
+background-size:cover;
+background-position: 66%;
+}
+.hero__content h1{color: #ffbc0d;}
+.hero__content p , h4{color: #fff;padding-right: 20px;}
+.cta{display: none;}
+.menu{position: absolute;top: -20px;right: -110%;background: rgb(29, 29, 29);height:100vh;padding-top: 80px;}
+.menu li{display: block;}
+.menu li a{padding: 15px 30px;font-size: 20px;color: #fff;}
+.menu--open{right:0%;}
+.card{
+display:block;
+padding-bottom: 150px;
+}
+.card1 {
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+width: 90%;
+}
+.card1:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card2 {
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+width: 90%;
+padding-left: 20px;
+}
+.card2:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.hamburger{
+display: block;
+width: 30px;
+height: 30px;
+position: absolute;
+top: 40px;
+right: 30px;
+}
+.hamburger span{background: #fff;height: 3px;width:100%;display: block;margin-bottom: 5px;}
+}
